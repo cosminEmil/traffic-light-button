@@ -1,13 +1,15 @@
-setInterval(function changeColor() {
-    //alert("Ai apasat butonul");
+function changeToRed() {
     let button = document.getElementById('myBtn');
+    button.className = 'btn btn-danger mt-0';
+    setTimeout(changeToYellow, 10 * 1000, button);
+}
 
-    if (button.className == 'btn btn-danger mt-0') {
-        button.className = 'btn btn-warning mt-0';
-    } else if (button.className == 'btn btn-warning mt-0') {
-        button.className = 'btn btn-success mt-0';
-    } else if (button.className == 'btn btn-success mt-0') {
-        button.className = 'btn btn-danger mt-0';
-    }
-    //alert("a juns aici");
-}, 10*1000);
+function changeToYellow(button) {
+    button.className = 'btn btn-warning mt-0';
+    setTimeout(changeToGreen, 10 * 1000, button);
+}
+
+function changeToGreen(button) {
+    button.className = 'btn btn-success mt-0';
+    setTimeout(changeToRed, 10 * 1000);
+}
