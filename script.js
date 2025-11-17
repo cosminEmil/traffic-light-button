@@ -1,12 +1,9 @@
 let colors = ['btn btn-danger mt-0', 'btn btn-warning mt-0', 'btn btn-success mt-0']
 let cnt = 0;
 
-setInterval(()=> {
-    cnt = 0
-}, 30 * 1000);
-
 setInterval(() => {
     changeColor();
+    cnt %= 3;
 }, 10 * 1000);
 
 function changeColor() {
