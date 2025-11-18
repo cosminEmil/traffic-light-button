@@ -3,11 +3,11 @@ let cnt = 0;
 
 setInterval(() => {
     changeColor();
-    cnt %= 3;
 }, 10 * 1000);
 
 function changeColor() {
     let btn = document.getElementById('myBtn');
     btn.className = colors[cnt];
     ++cnt;
+    cnt %= 3;
 }
